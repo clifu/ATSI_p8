@@ -1,1 +1,1 @@
-﻿
+﻿docker container run --rm -ti -p 80:80 atsi:latest

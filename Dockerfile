@@ -2,7 +2,11 @@ FROM ubuntu:latest
 
 MAINTAINER Damian Fronia, Patryk Gozdera, Adrian Pacholec
 
-RUN mkdir -p /usr/src/app 
-WORKDIR /usr/src/app 
+WORKDIR /usr/share/nginx/html
 
-EXPOSE 8080
+RUN apt-get update && apt-get install -y nginx 
+COPY index.html /var/www/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
