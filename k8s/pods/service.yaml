@@ -1,0 +1,29 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mme-service
+spec:
+  selector:
+    app: mme
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 80
+      nodePort: 30000
+  type: NodePort
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: upf-service
+spec:
+  selector:
+    app: upf
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 80
+      nodePort: 30001
+  type: NodePort

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mme
+spec:
+  containers:
+    - name: atsi-p8
+      image: clifu/atsi_p8
+      ports:
+        - containerPort: 80
