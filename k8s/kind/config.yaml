@@ -20,4 +20,3 @@ nodes:
         containerPath: /opt/cni/bin
 networking:
   disableDefaultCNI: true
-`
